@@ -225,6 +225,10 @@ public abstract class Case implements Affichable
 //////////////////////////////////////////////////////////////////////////////
 //                               ABSTRACT ACTION                            //
 //////////////////////////////////////////////////////////////////////////////
+	public String getRepresentation() {
+		// TODO Auto-generated method stub
+		return null;
+	}
   
   
 
