@@ -49,7 +49,15 @@ public class Menu {
 		}
 	}
 	private void quitter() {
-		// TODO Auto-generated method stub
+		int n;
+		System.out.println("L'application va se fermer, voulez vous continuer? (0 : quitter ou 1 : rester sur le jeu)");
+		Scanner s = new Scanner(System.in);
+		n=s.nextInt();
+		if (n==0){
+			System.exit(0);
+		} else if (n==1) {
+			new Menu();
+		}
 		
 	}
 	private void regles() throws IOException {
