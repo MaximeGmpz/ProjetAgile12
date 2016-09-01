@@ -1,5 +1,7 @@
 package lesCases;
 import java.util.*;
+
+import sun.misc.ThreadGroupUtils;
 public class Plateau {
 	private int y;
 	private int x;
@@ -24,6 +26,17 @@ public class Plateau {
 		y = 11;
 		numeroPlateau = numPlateau;
 	    plateau = new Affichable[x][y][3];
+	    
+	    generationPlateau(plateau);
+        
+		
+	}
+	
+	public Plateau(int x, int y,int numPlateau) {
+		this.x = x;
+		this.y = y;
+		numeroPlateau = numPlateau;
+	    plateau = new Affichable[this.x][this.y][3];
 	    
 	    generationPlateau(plateau);
         
