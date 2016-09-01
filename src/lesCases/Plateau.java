@@ -92,6 +92,9 @@ public class Plateau {
 			System.out.println();
 		}
 		
+		public void placer( int x , int y ,Case c){
+			this.plateau[x][y][0] = c ;
+		}
 	
 	}
 
