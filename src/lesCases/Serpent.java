@@ -8,11 +8,12 @@ public class Serpent {
 	private int taille;
 	private List<Case> serpent;
 	private int direction ;
+	private Tete tete ; 
 	
 	public Serpent(int id , int x , int y){
 		serpent = new ArrayList<Case>() ;
-		serpent.add(new Tete(x, y, id));
-		test.plateau.placer(x, y, new Tete(x, y, id));
+		tete = new Tete(x, y, id) ;
+		test.plateau.placer(x, y, tete);
 		serpent.add(new Corp(id, x, y + 1 ));
 		test.plateau.placer(x, y + 1, new Corp(id, x, y + 1));
 		
@@ -23,12 +24,14 @@ public class Serpent {
 	}
 	
 	public void deplacer(int direction){
+		int x = tete.getX();
+		int y = tete.getY();
 		if(direction == Directions.NORD){
-			for(Case a : serpent){
-				test.plateau.placer(a.getX(), a.getY(), new CaseNormal(new int[]{a.getX() , a.getY() , 0 }));
-				test.plateau.placer(a.getX(), a.getY() - 1, a );
-				a.y-- ;
-			}
+				
+				test.plateau.placer(tete.getX(), tete.getY(), new CaseNormal(new int[]{tete.getX() , tete.getY() , 0 }));
+				test.plateau.placer(tete.getX(), tete.getY() - 1, tete );
+				tete.y-- ;
+			
 		}
 		if(direction == Directions.EST){
 			for(Case a : serpent){
@@ -51,6 +54,7 @@ public class Serpent {
 				a.y-- ;
 			}
 		}
+		
 	}
 	
 /*	public Snacke(){
