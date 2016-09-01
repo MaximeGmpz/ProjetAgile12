@@ -6,12 +6,12 @@ import java.util.List;
 public class Serpent {
 	int id ;
 	private int taille;
-	private List<Case> serpent;
+	private ArrayList<Corp> serpent;
 	private int direction ;
 	private Tete tete ; 
 	
 	public Serpent(int id , int x , int y){
-		serpent = new ArrayList<Case>() ;
+		serpent = new ArrayList<Corp>() ;
 		tete = new Tete(x, y, id) ;
 		test.plateau.placer(x, y, tete);
 		serpent.add(new Corp(id, x, y + 1 ));
@@ -19,7 +19,7 @@ public class Serpent {
 		
 	}
 	
-	public void grandir(){
+	public void grandir(){E
 		taille = taille++ ;
 	}
 	
@@ -53,6 +53,23 @@ public class Serpent {
 				test.plateau.placer(a.getX() - 1 , a.getY(), a );
 				a.y-- ;
 			}
+		}
+		
+		ArrayList<Corp> copie = (ArrayList<Corp>) serpent.clone() ;
+		
+		serpent.get(0).x =x ;
+		serpent.get(0).y = y ;
+		test.plateau.placer(serpent.get(0));
+		for(int i = 1 ; i < serpent.size() ; i++){
+			if(i == serpent.size() - 1){
+				int posX = serpent.get(i).x ;
+				int posY = serpent.get(i).y ;
+				test.plateau.placer(new CaseNormal(, ratio));
+			}
+			serpent.get(i).x = copie.get(i - 1).getX();
+			serpent.get(i).y = copie.get(i - 1).getY();
+			test.plateau.placer(serpent.get(i));
+			
 		}
 		
 	}

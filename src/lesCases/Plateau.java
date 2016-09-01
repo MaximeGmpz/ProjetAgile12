@@ -164,6 +164,9 @@ public class Plateau {
 		public void placer( int x , int y ,Case c){
 			this.plateau[x][y][0] = c ;
 		}
+		public void placer(Affichable c){
+			this.plateau[c.getX()][c.getY()][0] = c ;
+		}
 	
 	}
 
