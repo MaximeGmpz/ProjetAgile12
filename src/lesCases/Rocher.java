@@ -12,8 +12,8 @@ public class Rocher extends Case   {
 //                              ATTRIBUT                                    //
 //////////////////////////////////////////////////////////////////////////////
 
-private String representationEquipe1=Case.BLUE+'X'+Case.RESET;
-private String representationEquipe2=Case.RED+'X'+Case.RESET;
+private String representationEquipe1=Case.BLACK+'X'+Case.RESET;
+private String representationEquipe2=Case.BLACK+'X'+Case.RESET;
 private int numeroEquipe=0;
 
 //////////////////////////////////////////////////////////////////////////////

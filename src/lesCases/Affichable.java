@@ -6,6 +6,7 @@ public interface Affichable {
 	public String getRepresentationEquipe2();
 	public int getX();
 	public int getY();
-    public int getNumeroEquipe(); 
+    public int getNumeroEquipe();
+    public String getRepresentation(); 
 
 }
