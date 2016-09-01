@@ -19,7 +19,7 @@ public class Serpent {
 		
 	}
 	
-	public void grandir(){E
+	public void grandir(){
 		taille = taille++ ;
 	}
 	
