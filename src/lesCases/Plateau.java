@@ -1,4 +1,8 @@
 package lesCases;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 import sun.misc.ThreadGroupUtils;
@@ -167,6 +171,25 @@ public class Plateau {
 		public void placer(Affichable c){
 			this.plateau[c.getX()][c.getY()][0] = c ;
 		}
+		
+		public int getTaille(){
+			FileReader lectureTaille;
+			BufferedReader buffer;
+			String tailleLue="";
+			
+			try {
+				lectureTaille= new FileReader("options.txt");
+				buffer=new BufferedReader(lectureTaille);
+				tailleLue=buffer.readLine();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e){
+				e.printStackTrace();
+			}
+			return Integer.parseInt(tailleLue);
+		}
+		
 	
 	}
 
