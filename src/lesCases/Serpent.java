@@ -17,7 +17,7 @@ public class Serpent {
 		serpent.add(new Corp(id, x, y + 1));
 		test.plateau.placer(x, y + 1, new Corp(id, x, y + 1));
 		serpent.add(new Corp(id, x, y + 2));
-		test.plateau.placer(x, y + 1, new Corp(id, x, y + 2));
+		test.plateau.placer(x, y + 2, new Corp(id, x, y + 2));
 
 	}
 
@@ -26,8 +26,8 @@ public class Serpent {
 	}
 
 	public void deplacer(int direction) {
-		int x = tete.getX();
-		int y = tete.getY();
+		
+		
 		if (direction == Directions.NORD) {
 
 			test.plateau.placer(tete.getX(), tete.getY(), new CaseNormal(new int[] { tete.getX(), tete.getY(), 0 }));
@@ -54,25 +54,8 @@ public class Serpent {
 
 		ArrayList<Corp> copie = (ArrayList<Corp>) serpent.clone();
 
-		serpent.get(0).x = x;
-		serpent.get(0).y = y;
-		test.plateau.placer(serpent.get(0));
-		for (int i = 1; i < serpent.size(); i++) {
-			
-			serpent.get(i).x = copie.get(i - 1).getX();
-			serpent.get(i).y = copie.get(i - 1).getY();
-			
-			test.plateau.placer(serpent.get(i));
-			
-			if (i == serpent.size() - 1) {
-				int posX = serpent.get(i).x;
-				int posY = serpent.get(i).y;
-				test.plateau.placer(new CaseNormal(new int[] { posX, posY}));
-				
-			}
-			
-
-		}
+		
+		
 
 	}
 

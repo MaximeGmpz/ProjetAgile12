@@ -5,24 +5,9 @@ public class test {
 
 	public static void main(String[] args) {
 
-		Serpent python = new Serpent(1, 5, 5);
-		plateau.afficher();
-		python.deplacer(Directions.NORD);
-		plateau.afficher();
-		python.deplacer(Directions.NORD);
-		plateau.afficher();
-		python.deplacer(Directions.EST);
-		plateau.afficher();
-		python.deplacer(Directions.EST);
-		plateau.afficher();
-		python.deplacer(Directions.SUD);
-		plateau.afficher();
-		python.deplacer(Directions.SUD);
-		plateau.afficher();
-		python.deplacer(Directions.OUEST);
-		plateau.afficher();
-		python.deplacer(Directions.OUEST);
-		plateau.afficher();
+		Menu menu = new Menu() ;
+		plateau = menu.choixPlateau ;
+		new Game();
 	}
 
 }
