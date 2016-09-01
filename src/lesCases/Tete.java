@@ -2,8 +2,8 @@ package lesCases;
 
 public class Tete extends Case {
 	private int equipe;
-	public Tete(int[] coordonnes, int equipe) {
-		super(coordonnes);
+	public Tete(int x , int y , int equipe) {
+		super(x , y);
 		this.equipe = equipe;
 	}
 

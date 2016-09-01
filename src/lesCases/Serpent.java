@@ -11,8 +11,10 @@ public class Serpent {
 	
 	public Serpent(int id , int x , int y){
 		serpent = new ArrayList<Case>() ;
-		serpent.add(new Corp(id, x, y));
-		test.plateau.placer(x, y, new Corp(id, x, y));
+		serpent.add(new Tete(x, y, id));
+		test.plateau.placer(x, y, new Tete(x, y, id));
+		serpent.add(new Corp(id, x, y + 1 ));
+		test.plateau.placer(x, y + 1, new Corp(id, x, y + 1));
 		
 	}
 	
