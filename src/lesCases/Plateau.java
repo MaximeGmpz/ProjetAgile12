@@ -7,19 +7,20 @@ import java.io.IOException;
 import java.util.*;
 
 import com.sun.jmx.snmp.SnmpStringFixed;
+import com.sun.org.apache.xpath.internal.operations.Gt;
 
 import sun.misc.ThreadGroupUtils;
 public class Plateau {
-	private int y;
-	private int x;
+	private int y=getTaille();
+	private int x=getTaille();
 	private int numeroPlateau;
     private Affichable[][][] plateau;
 	private int nbEquipe;
 	private Random random;
 	
 	public Plateau() {
-		x = 11;
-		y = 11;
+		x = getTaille();
+		y = getTaille();
 		numeroPlateau = 0;
 	    plateau = new Affichable[x][y][3];
 	    
@@ -29,8 +30,8 @@ public class Plateau {
 	}
 	
 	public Plateau(int numPlateau) {
-		x = 11;
-		y = 11;
+		x = getTaille();
+		y = getTaille();
 		numeroPlateau = numPlateau;
 	    plateau = new Affichable[x][y][3];
 	    
@@ -195,11 +196,15 @@ public class Plateau {
 		
 	
 		public void setOptions (int taille){
+			System.out.println("1");
 			try {
+				System.out.println("grde");
 				FileWriter ffw=new FileWriter("options.txt");
 				ffw.write(taille);
+				ffw.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
+				System.out.println("e");
 				e.printStackTrace();
 			}
 		}

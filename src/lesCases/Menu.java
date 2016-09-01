@@ -4,6 +4,7 @@ package lesCases;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -96,13 +97,23 @@ public class Menu {
 				taille=s2.nextInt();
 			}
 			this.taillePlateau=taille;
+			try {
+				System.out.println("grde");
+				FileWriter ffw=new FileWriter("options.txt");
+				ffw.write(""+this.taillePlateau);
+				ffw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println("e");
+				e.printStackTrace();
+			}
 			
 		} else if (scan==2){
 			new Menu();	
 			
 		}
 			System.out.println(this.taillePlateau);
-			plateauChoisi.setOptions(this.taillePlateau);
+			
 			new Menu();
 		 
 		
@@ -125,7 +136,7 @@ public class Menu {
 			choix_plateau = s.nextInt();
 		}
 		
-		plateauChoisi=new Plateau(taillePlateau,taillePlateau,choix_plateau);
+		plateauChoisi=new Plateau(choix_plateau);
 		
 	}
 	
