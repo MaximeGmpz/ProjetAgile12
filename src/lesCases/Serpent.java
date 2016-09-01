@@ -64,7 +64,7 @@ public class Serpent {
 			if(i == serpent.size() - 1){
 				int posX = serpent.get(i).x ;
 				int posY = serpent.get(i).y ;
-				test.plateau.placer(new CaseNormal(, ratio));
+				test.plateau.placer(new CaseNormal(new int[]{posX,posY,0}));
 			}
 			serpent.get(i).x = copie.get(i - 1).getX();
 			serpent.get(i).y = copie.get(i - 1).getY();
