@@ -10,7 +10,8 @@ import java.util.Scanner;
 public class Menu {
 	
 	private Plateau plateauChoisi;
-	private int taillePlateau;
+	private int taillePlateau=10;
+	private String couleurPlateau=Case.BLUE;
 	
 	public Menu(){
 		int choix;
@@ -94,8 +95,30 @@ public class Menu {
 			taillePlateau=s2.nextInt();
 			
 		} else if (scan==2){
+			System.out.println("Quelle couleur souhaitez-vous?");
+			System.out.println("1 : Bleu");
+			System.out.println("2 : Noir");
+			System.out.println("3 : Rouge");
+			Scanner s3=new Scanner(System.in);
+			int n=s3.nextInt();
+			switch(n){
+			case 1:
+				this.couleurPlateau=Case.BLUE;
+				break;
+			case 2:
+				this.couleurPlateau=Case.BLACK;
+				break;
+			case 3:
+				this.couleurPlateau=Case.RED;
+				break;
+				default:
+			}
+		} else if (scan==3) {
+			new Menu();	
 			
 		}
+			plateauChoisi.setOptions(this.taillePlateau, this.couleurPlateau);
+		 
 		
 		
 	}

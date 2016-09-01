@@ -160,7 +160,7 @@ public class Plateau {
 			for (int i = 0; i < y; i++) {
 				for (int j = 0; j < x; j++) {
 
-					System.out.print("|" + this.plateau[j][i][0].getRepresentation());
+					System.out.print(getCouleurPlateau()+"|"+Case.RESET + this.plateau[j][i][0].getRepresentation());
 					
 				}
 				System.out.println("|");
