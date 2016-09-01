@@ -5,7 +5,7 @@ public class test {
 
 	public static void main(String[] args) {
 
-		Serpent python = new Serpent(1, 8, 8);
+		Serpent python = new Serpent(1, 5, 5);
 		plateau.afficher();
 		python.deplacer(Directions.NORD);
 		plateau.afficher();
