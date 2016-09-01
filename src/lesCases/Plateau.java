@@ -160,7 +160,7 @@ public class Plateau {
 			for (int i = 0; i < y; i++) {
 				for (int j = 0; j < x; j++) {
 
-					System.out.print(getCouleurPlateau()+"|"+Case.RESET + this.plateau[j][i][0].getRepresentation());
+					System.out.print("|" + this.plateau[j][i][0].getRepresentation());
 					
 				}
 				System.out.println("|");
@@ -193,32 +193,11 @@ public class Plateau {
 			return Integer.parseInt(tailleLue);
 		}
 		
-		public String getCouleurPlateau() {
-			FileReader lectureCouleur;
-			BufferedReader buffer;
-			String couleurLue="";
-			
-			try {
-				lectureCouleur= new FileReader("options.txt");
-				buffer=new BufferedReader(lectureCouleur);
-				couleurLue=buffer.readLine();
-				couleurLue=buffer.readLine();
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e){
-				e.printStackTrace();
-			}
-			return couleurLue;
-		
-		}
-		
-		public void setOptions (int taille, String couleur){
+	
+		public void setOptions (int taille){
 			try {
 				FileWriter ffw=new FileWriter("options.txt");
 				ffw.write(taille);
-				ffw.write("\n");
-				ffw.write(couleur);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

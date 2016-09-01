@@ -11,7 +11,6 @@ public class Menu {
 	
 	private Plateau plateauChoisi;
 	private int taillePlateau=10;
-	private String couleurPlateau=Case.BLUE;
 	
 	public Menu(){
 		int choix;
@@ -85,39 +84,26 @@ public class Menu {
 		int scan;
 		System.out.println("Que voulez-vous modifier?");
 		System.out.println("1 : Taille du plateau");
-		System.out.println("2 : Changer la couleur du plateau");
-		System.out.println("3 : Revenir au menu");
+		System.out.println("2 : Revenir au menu");
 		Scanner s1=new Scanner(System.in);
 		scan=s1.nextInt();
 		if (scan==1){
+			int taille;
 			System.out.println("Quelle taille souhaitez-vous ?");
 			Scanner s2=new Scanner(System.in);
-			taillePlateau=s2.nextInt();
+			taille=s2.nextInt();
+			while (taille<10 || taille > 25){
+				taille=s2.nextInt();
+			}
+			this.taillePlateau=taille;
 			
 		} else if (scan==2){
-			System.out.println("Quelle couleur souhaitez-vous?");
-			System.out.println("1 : Bleu");
-			System.out.println("2 : Noir");
-			System.out.println("3 : Rouge");
-			Scanner s3=new Scanner(System.in);
-			int n=s3.nextInt();
-			switch(n){
-			case 1:
-				this.couleurPlateau=Case.BLUE;
-				break;
-			case 2:
-				this.couleurPlateau=Case.BLACK;
-				break;
-			case 3:
-				this.couleurPlateau=Case.RED;
-				break;
-				default:
-			}
-		} else if (scan==3) {
 			new Menu();	
 			
 		}
-			plateauChoisi.setOptions(this.taillePlateau, this.couleurPlateau);
+			System.out.println(this.taillePlateau);
+			plateauChoisi.setOptions(this.taillePlateau);
+			new Menu();
 		 
 		
 		
@@ -139,7 +125,11 @@ public class Menu {
 			choix_plateau = s.nextInt();
 		}
 		
-		plateauChoisi=new Plateau(choix_plateau);
+		plateauChoisi=new Plateau(taillePlateau,taillePlateau,choix_plateau);
 		
+	}
+	
+	public Plateau getPlateauChoisi() {
+		return this.plateauChoisi;
 	}
 }

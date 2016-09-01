@@ -1,12 +1,14 @@
 package lesCases;
 
+import org.omg.CORBA.PRIVATE_MEMBER;
+
 public class test {
-	public static Plateau plateau = new Plateau(3);
+	public static Plateau plateau;
 
 	public static void main(String[] args) {
 
-		Menu menu = new Menu() ;
-		plateau = menu.choixPlateau ;
+		final Menu menu = new Menu() ;
+		plateau = menu.getPlateauChoisi();
 		new Game();
 	}
 
