@@ -31,39 +31,41 @@ public class Serpent {
  		
 		if (direction == Directions.NORD) {
 
-			test.plateau.placer(tete.getX(), tete.getY(), new CaseNormal(new int[] { tete.getX(), tete.getY(), 0 }));
-			test.plateau.placer(tete.getX(), tete.getY() - 1, tete);
+			
 			tete.y--;
+			
 
 		}
 		if (direction == Directions.EST) {
-			test.plateau.placer(tete.getX(), tete.getY(), new CaseNormal(new int[] { tete.getX(), tete.getY(), 0 }));
-			test.plateau.placer(tete.getX() + 1, tete.getY(), tete);
+			
 			tete.x++;
 		}
 		if (direction == Directions.SUD) {
-			test.plateau.placer(tete.getX(), tete.getY(), new CaseNormal(new int[] { tete.getX(), tete.getY(), 0 }));
-			test.plateau.placer(tete.getX(), tete.getY() + 1, tete);
+			
 			tete.y++;
 		}
 		if (direction == Directions.OUEST) {
-			test.plateau.placer(tete.getX(), tete.getY(), new CaseNormal(new int[] { tete.getX(), tete.getY(), 0 }));
-			test.plateau.placer(tete.getX() - 1, tete.getY(), tete);
-			tete.y--;
+			
+			tete.x--;
 
 		}
-		ArrayList<Corp> copie = (ArrayList<Corp>) serpent.clone();
+		test.plateau.placer(tete);
+		ArrayList<Corp> copie = (ArrayList<Corp>) serpent.clone(); ;
 		serpent.get(0).x = teteX ;
 		serpent.get(0).y = teteY ;
 		test.plateau.placer(serpent.get(0));
 		for(int i = 1 ; i < serpent.size() ; i++){
-			
+			serpent.get(i).x = copie.get(i - 1).getX() ;
+			serpent.get(i).y = copie.get(i - 1).getY();
+			test.plateau.placer(serpent.get(i));
+					
 		}
+		int tab[]=new int[3];
+		tab[0]=serpent.get(serpent.size()-1).getX() ;
+		tab[1]=serpent.get(serpent.size()-1).getY() ;
+		tab[2]=0;
+		test.plateau.placer(new CaseNormal(tab ));
 		
-		
-
-		
-		serpent.get(serpent.size()-1)
 
 	}
 

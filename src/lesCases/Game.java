@@ -8,7 +8,7 @@ public class Game {
 		
 		boolean b=true;
 		
-		
+
 		Serpent s1 = new Serpent(1, 8, 8);
 		Serpent s2 = new Serpent(2, 2, 2);
 		
