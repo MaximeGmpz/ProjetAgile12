@@ -53,6 +53,10 @@ public abstract class Case implements Affichable
 		this.y=coordonnes[1];
 		
 	}
+	public Case(int x , int y){
+		this.x = x ;
+		this.y = y ;
+	}
 
 //////////////////////////////////////////////////////////////////////////////
 //                    GETTER/SETTER ABSCISSE  X                              //
