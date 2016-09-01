@@ -80,7 +80,7 @@ public class Menu {
 		new Menu();
 	}
 	private void option() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	private void jouer() {
