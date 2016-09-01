@@ -30,6 +30,17 @@ public class Plateau {
 		
 	}
 	
+	public Plateau(int x, int y,int numPlateau) {
+		this.x = x;
+		this.y = y;
+		numeroPlateau = numPlateau;
+	    plateau = new Affichable[x][y][3];
+	    
+	    generationPlateau(plateau);
+        
+		
+	}
+	
 	private void generationPlateau(Affichable[][][] plateau) {
 		
 		int[] tab = new int[3];
