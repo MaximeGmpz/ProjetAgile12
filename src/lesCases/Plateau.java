@@ -52,7 +52,7 @@ public class Plateau {
 						tab[0] = j;
 						tab[1] = i;
 						tab[2] = 0;
-						this.plateau[j][i][0] = new CaseNormal(tab, 20);
+						this.plateau[j][i][0] = new CaseNormal(tab);
 					}
 				}
 

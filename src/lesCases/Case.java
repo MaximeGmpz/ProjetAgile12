@@ -18,7 +18,7 @@ public abstract class Case implements Affichable
 	public int y;
 	private boolean franchissableEquipe1;
     private boolean franchissableEquipe2;
-    protected ObjetATrouver obj;
+//    protected ObjetATrouver obj;
     private boolean Modifiable;
     public static Scanner scan = new Scanner(System.in);
 

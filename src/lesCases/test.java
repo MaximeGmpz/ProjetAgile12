@@ -1,16 +1,11 @@
 package lesCases;
 
 public class test {
-	public static Plateau plateau;
+	public static Plateau plateau = new Plateau(3);
 
 	public static void main(String[] args) {
 		
-	
-		Menu menu=new Menu();
-		plateau=menu.choixPlateau;
 		
-		new Game();
-		/*
 		Serpent python = new Serpent(1, 8, 8);		
 		plateau.afficher();
 		python.deplacer(Directions.NORD);
@@ -28,7 +23,7 @@ public class test {
 		python.deplacer(Directions.SUD);
 		plateau.afficher();
 		python.deplacer(Directions.OUEST);
-		plateau.afficher();*/
+		plateau.afficher();
 	}
 
 }

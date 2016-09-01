@@ -44,22 +44,8 @@ private int ratio = 0;
  * @param ratio
  *        ratio entier : chance de trouver un objet sur la case sur 100
  */
-public CaseNormal(int[] coordonnes, int ratio) {
-super(coordonnes);
-this.setFranchissableEquipe1(true);
-this.setFranchissableEquipe2(true);
 
-this.setModifiable(true);
-random = new Random();
-this.ratio = ratio;
-int cas = random.nextInt(100);
-if (cas < ratio) {
-super.obj = ObjetATrouver.getObjetATrouver(random.nextInt(5 - 1) + 1);
-} else {
-super.obj = null;
-}
 
-}
 /**
  * Constructeur numero2 CaseNormal
  * @param coordonnes
@@ -67,15 +53,15 @@ super.obj = null;
  * @param obj
  *        obj ObjetATrouver : objet placer directement sur le case
  */
-public CaseNormal(int[] coordonnes, ObjetATrouver obj) {
-super(coordonnes);
-
-this.setFranchissableEquipe1(true);
-this.setFranchissableEquipe2(true);
-super.obj = obj;
-this.setModifiable(true);
-
-}
+//public CaseNormal(int[] coordonnes, ObjetATrouver obj) {
+//super(coordonnes);
+//
+//this.setFranchissableEquipe1(true);
+//this.setFranchissableEquipe2(true);
+//super.obj = obj;
+//this.setModifiable(true);
+//
+//}
  /**
   * Constructeur numero 2 des CaseNormal
   * @param coordonnes
@@ -86,7 +72,7 @@ super(coordonnes);
 
 this.setFranchissableEquipe1(true);
 this.setFranchissableEquipe2(true);
-this.obj = null;
+//this.obj = null;
 this.setModifiable(true);
 
 }

@@ -28,7 +28,7 @@ super(coordonnes);
 
 this.setFranchissableEquipe1(false);
 this.setFranchissableEquipe2(false);
-this.setObj(null);
+// this.setObj(null);
 this.setModifiable(false);
 
 }
