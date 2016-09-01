@@ -53,7 +53,7 @@ public enum ObjetATrouver {
 	 * @return
 	 */
 	public static ObjetATrouver getObjetATrouver(int numero){
-		return vecteurOBJ[numero-1];
+		return vecteurOBJ[numero];
 	
 	}
 	/**
