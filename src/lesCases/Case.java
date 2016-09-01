@@ -14,8 +14,8 @@ public abstract class Case implements Affichable
 //                               ATRIBUS                                    //
 //////////////////////////////////////////////////////////////////////////////
 	
-	private int x;
-	private int y;
+	public int x;
+	public int y;
 	private boolean franchissableEquipe1;
     private boolean franchissableEquipe2;
     protected ObjetATrouver obj;

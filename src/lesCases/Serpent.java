@@ -6,11 +6,11 @@ import java.util.List;
 public class Serpent {
 	int id ;
 	private int taille;
-	private List<Affichable> serpent;
+	private List<Case> serpent;
 	private int direction ;
 	
 	public Serpent(int id , int x , int y){
-		serpent = new ArrayList<Affichable>() ;
+		serpent = new ArrayList<Case>() ;
 		serpent.add(new Corp(id, x, y));
 		test.plateau.placer(x, y, new Corp(id, x, y));
 		
@@ -22,9 +22,9 @@ public class Serpent {
 	
 	public void deplacer(int direction){
 		if(direction == Directions.NORD){
-			for(Affichable a : serpent){
+			for(Case a : serpent){
 				test.plateau.placer(a.getX(), a.getY(), new CaseNormal(new int[]{a.getX() , a.getY() , 0 }));
-				test.plateau.placer(a.getX(), a.getY() - 1, new Corp(1, a.getX() , a.getY() - 1));
+				test.plateau.placer(a.getX(), a.getY() - 1, a );
 			}
 		}
 	}
