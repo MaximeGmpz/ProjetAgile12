@@ -29,8 +29,8 @@ public class CaseNormal extends Case {
 //////////////////////////////////////////////////////////////////////////////
 
 private Random random;
-private String representationEquipe1 = Case.BLUE + " " + Case.RESET;
-private String representationEquipe2 = Case.RED + " " + Case.RESET;
+private String representation = Case.BLACK + " " + Case.RESET;
+
 
 private int ratio = 0;
 
@@ -99,19 +99,16 @@ this.setModifiable(true);
  * retourne la representation courante de l equipe 1
  * @return la representation courante de l equipe 1
  */
-public String getRepresentationEquipe1() {
+public String getRepresentation() {
 
-return this.representationEquipe1;
+return this.representation ;
 }
 
 /**
 * retourne la representation courante de l equipe 2
 * @return la representation courante de l equipe 2
 */
-public String getRepresentationEquipe2() {
 
-return this.representationEquipe2;
-}
 
 
 

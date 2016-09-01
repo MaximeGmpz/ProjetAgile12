@@ -10,16 +10,15 @@ public class Corp extends Case {
 	}
 
 	@Override
-	public String getRepresentationEquipe1() {
-		// TODO Auto-generated method stub
+	public String getRepresentation() {
+		if(equipe == 1){
 		return Case.BLUE + "+" + Case.RESET ;
+		}else{
+			return Case.RED + "+" + Case.RESET ;
+		}
 	}
 
-	@Override
-	public String getRepresentationEquipe2() {
-		// TODO Auto-generated method stub
-		return Case.RED + "+" + Case.RESET ;
-	}
+	
 
 	@Override
 	public int getNumeroEquipe() {

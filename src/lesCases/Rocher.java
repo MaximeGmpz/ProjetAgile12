@@ -12,8 +12,7 @@ public class Rocher extends Case   {
 //                              ATTRIBUT                                    //
 //////////////////////////////////////////////////////////////////////////////
 
-private String representationEquipe1=Case.BLACK+'X'+Case.RESET;
-private String representationEquipe2=Case.BLACK+'X'+Case.RESET;
+private String representation =Case.BLACK+'X'+Case.RESET;
 private int numeroEquipe=0;
 
 //////////////////////////////////////////////////////////////////////////////
@@ -58,9 +57,9 @@ return false;}
  * retourne la representation courante de l equipe 1
  * @return la representation courante de l equipe 1
  */
-public String getRepresentationEquipe1() {
+public String getRepresentation() {
 
-return this.representationEquipe1;
+return this.representation;
 }
 
 /**
