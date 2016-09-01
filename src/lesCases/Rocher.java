@@ -67,11 +67,6 @@ return this.representation;
  * @return la representation courante de l equipe 2
  */
 
-public String getRepresentationEquipe2() {
-
-return this.representationEquipe2;
-}
-
 //////////////////////////////////////////////////////////////////////////////
 //                            GETTER EQUIPE                                 //
 //////////////////////////////////////////////////////////////////////////////

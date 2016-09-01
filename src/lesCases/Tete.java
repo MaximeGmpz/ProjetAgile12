@@ -8,14 +8,14 @@ public class Tete extends Case {
 	}
 
 	@Override
-	public String getRepresentationEquipe1() {
-		return Case.BLUE + "O" + Case.RESET;
+	public String getRepresentation() {
+		if(equipe == 1){
+		return Case.BLUE + "O" + Case.RESET ;
+		}else{
+			return Case.RED + "O" + Case.RESET ;
+		}
 	}
 
-	@Override
-	public String getRepresentationEquipe2() {
-		return Case.RED + "O" + Case.RESET;
-	}
 
 	@Override
 	public int getNumeroEquipe() {

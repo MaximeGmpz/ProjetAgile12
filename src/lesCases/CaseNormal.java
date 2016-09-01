@@ -131,8 +131,8 @@ return this.ratio;
 //////////////////////////////////////////////////////////////////////////////
 
 public String toString() {
-return "CaseNormal obj=" + obj + "\n representationEquipe1=" + representationEquipe1
-+ "\n representationEquipe2=" + representationEquipe2 + "\n ratio=" + ratio + "\n";
+return "CaseNormal obj=" + obj + "\n representationEquipe1=" + representation
++ "\n representationEquipe2=" + representation + "\n ratio=" + ratio + "\n";
 }
 @Override
 public int getNumeroEquipe() {
