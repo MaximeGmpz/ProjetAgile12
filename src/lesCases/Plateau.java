@@ -64,20 +64,27 @@ public class Plateau {
 		}
 	}
 	private void genereMotif(Affichable[][][] plateau,int numero){
+		switch (numero)
+		{
+		  case 0:
+			  int[] tab = new int[3];
+				for (int i1 =2 ; i1 < x-2 ; i1++) {
+					tab[0] = i1;
+					tab[1] = 2;
+					tab[2] = 0;
+					this.plateau[i1][2][0] = new Rocher(tab);
+				}
+				for (int i1 =2 ; i1 < x-2 ; i1++) {
+					tab[0] = i1;
+					tab[1] = y-2;
+					tab[2] = 0;
+					this.plateau[i1][y-3][0] = new Rocher(tab);
+				}
+		    break;        
+		  default:
+		    /*Action*/;             
+		}
 		
-		int[] tab = new int[3];
-		for (int i1 =2 ; i1 < x-2 ; i1++) {
-			tab[0] = i1;
-			tab[1] = 2;
-			tab[2] = 0;
-			this.plateau[i1][2][0] = new Rocher(tab);
-		}
-		for (int i1 =2 ; i1 < x-2 ; i1++) {
-			tab[0] = i1;
-			tab[1] = y-2;
-			tab[2] = 0;
-			this.plateau[i1][y-3][0] = new Rocher(tab);
-		}
 		}
 		
 		public void afficher() {
