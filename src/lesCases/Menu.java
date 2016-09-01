@@ -9,7 +9,8 @@ import java.util.Scanner;
 
 public class Menu {
 	
-	Plateau choixPlateau;
+	private Plateau plateauChoisi;
+	private int taillePlateau;
 	
 	public Menu(){
 		int choix;
@@ -80,6 +81,21 @@ public class Menu {
 		new Menu();
 	}
 	private void option() {
+		int scan;
+		System.out.println("Que voulez-vous modifier?");
+		System.out.println("1 : Taille du plateau");
+		System.out.println("2 : Changer la couleur du plateau");
+		System.out.println("3 : Revenir au menu");
+		Scanner s1=new Scanner(System.in);
+		scan=s1.nextInt();
+		if (scan==1){
+			System.out.println("Quelle taille souhaitez-vous ?");
+			Scanner s2=new Scanner(System.in);
+			taillePlateau=s2.nextInt();
+			
+		} else if (scan==2){
+			
+		}
 		
 		
 	}
@@ -100,7 +116,7 @@ public class Menu {
 			choix_plateau = s.nextInt();
 		}
 		
-		choixPlateau=new Plateau(choix_plateau);
+		plateauChoisi=new Plateau(choix_plateau);
 		
 	}
 }
