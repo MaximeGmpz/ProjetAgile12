@@ -9,9 +9,20 @@ public class Plateau {
 	private Random random;
 	
 	public Plateau() {
-		x = 10;
-		y = 10;
+		x = 11;
+		y = 11;
 		numeroPlateau = 0;
+	    plateau = new Affichable[x][y][3];
+	    
+	    generationPlateau(plateau);
+        
+		
+	}
+	
+	public Plateau(int numPlateau) {
+		x = 11;
+		y = 11;
+		numeroPlateau = numPlateau;
 	    plateau = new Affichable[x][y][3];
 	    
 	    generationPlateau(plateau);
@@ -82,21 +93,43 @@ public class Plateau {
 					this.plateau[i1][y-3][0] = new Rocher(tab);
 				}
 		    break; 
-		  case 1 :
+		  case 1:
 			  
-				for (int i1 = x-2 ; i1 < 2; i1++) {
-					tab[0] = i1;
-					tab[1] = 2;
-					tab[2] = 0;
-					this.plateau[i1][2][0] = new Rocher(tab);
-				}
-				for (int i1 =x-2 ; i1 < 2 ; i1++) {
-					tab[0] = i1;
-					tab[1] = y-2;
-					tab[2] = 0;
-					this.plateau[i1][y-3][0] = new Rocher(tab);
-				}
+			  for(int i1=2; i1<x-2; i1++){
+				  tab[0] = i1;
+				  tab[1] = 4;
+				  tab[2] = 0;
+					this.plateau[i1][5][0] = new Rocher(tab);
+			  }
+			  
+			  for (int i2=3; i2<x-3; i2++){
+				  tab[0] = 5;
+				  tab[1] = i2;
+				  tab[2] = 0;
+					this.plateau[5][i2][0] = new Rocher(tab);
+			  }
+			  
 			break;
+			
+		  case 2:
+			  for(int i1=2; i1<x-2; i1++){
+				  tab[0] = 2;
+				  tab[1] = i1;
+				  tab[2] = 0;
+					this.plateau[2][i1][0] = new Rocher(tab);
+			  }
+			  
+			  for (int i2=2; i2<x-2; i2++){
+				  tab[0] = x-2;
+				  tab[1] = i2;
+				  tab[2] = 0;
+					this.plateau[x-3][i2][0] = new Rocher(tab);
+			  }
+			  break;
+			  
+		  
+			  
+			  
 		  default:
 		    /*Action*/;             
 		}
