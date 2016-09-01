@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
-	public static void main(String[] args){
-		new Menu();
-	}
+	
+	Plateau choixPlateau;
+	
 	public Menu(){
 		int choix;
 		System.out.println(Case.BOLD + "Bonjour, voulez-vous :" + Case.RESET);
@@ -92,8 +92,7 @@ public class Menu {
 			choix_plateau = s.nextInt();
 		}
 		
-		Plateau monPlateau = new Plateau(choix_plateau);
-		monPlateau.afficher();
+		choixPlateau=new Plateau(choix_plateau);
 		
 	}
 }
