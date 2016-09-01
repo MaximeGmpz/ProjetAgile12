@@ -25,6 +25,7 @@ public class Serpent {
 			for(Case a : serpent){
 				test.plateau.placer(a.getX(), a.getY(), new CaseNormal(new int[]{a.getX() , a.getY() , 0 }));
 				test.plateau.placer(a.getX(), a.getY() - 1, a );
+				a.y-- ;
 			}
 		}
 	}
