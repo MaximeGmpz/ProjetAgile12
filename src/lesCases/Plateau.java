@@ -67,9 +67,9 @@ public class Plateau {
 		int[] tab = new int[3];
 		switch (numero)
 		{
-		  case 1:
+		  case 0:
 			  
-				for (int i1 =2 ; i1 < x-2 ; i1++) {
+				for (int i1 =2 ; i1 < x-2 ; i1++) { 
 					tab[0] = i1;
 					tab[1] = 2;
 					tab[2] = 0;
@@ -82,7 +82,7 @@ public class Plateau {
 					this.plateau[i1][y-3][0] = new Rocher(tab);
 				}
 		    break; 
-		  case 0 :
+		  case 1 :
 			  
 				for (int i1 = x-2 ; i1 < 2; i1++) {
 					tab[0] = i1;
