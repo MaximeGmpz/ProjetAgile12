@@ -11,7 +11,6 @@ import java.util.Random;
  * @author thibault CORBRION
  */
 
-
 //////////////////////////////////////////////////////////////////////////////
 //AUTEUR : THIBAULT CORBRION                       //
 //////////////////////////////////////////////////////////////////////////////
@@ -53,15 +52,16 @@ private int ratio = 0;
  * @param obj
  *        obj ObjetATrouver : objet placer directement sur le case
  */
-//public CaseNormal(int[] coordonnes, ObjetATrouver obj) {
-//super(coordonnes);
-//
-//this.setFranchissableEquipe1(true);
-//this.setFranchissableEquipe2(true);
-//super.obj = obj;
-//this.setModifiable(true);
-//
-//}
+public CaseNormal(int[] coordonnes, ObjetATrouver obj) {
+super(coordonnes);
+
+this.setFranchissableEquipe1(true);
+this.setFranchissableEquipe2(true);
+super.obj = obj;
+this.setModifiable(true);
+this.setRepresentaion(obj.getRepresentationObjetATrouver());
+
+}
  /**
   * Constructeur numero 2 des CaseNormal
   * @param coordonnes
@@ -111,7 +111,10 @@ public int getRatio() {
 return this.ratio;
 }
 
-
+private void setRepresentaion(String nouvelle){
+	this.representation=nouvelle;
+	
+}
 
 //////////////////////////////////////////////////////////////////////////////
 // TO STRING //
