@@ -207,7 +207,7 @@ public abstract class Case implements Affichable
 //GESTION OBJ                                                               //
 //////////////////////////////////////////////////////////////////////////////
 	/**
-	 * rend une case modifiable ou non 
+	 * rend une case modifiable ou non //                               ATRIBUS                                    //
 	 * @param b
 	 *        b boolean
 	 */
