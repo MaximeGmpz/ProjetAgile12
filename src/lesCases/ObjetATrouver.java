@@ -17,8 +17,8 @@ public enum ObjetATrouver {
 	private int numeroOBJ ;
 	private static ObjetATrouver[] vecteurOBJ =values();
 	private String representation;
-	private int influenceTaille;
-	private int influenceAction;
+	private int infuenceTaille;
+	private int infuenceAction;
 	
 	/**
 	 * Objet a trouver  qui prend un numero et une representation
@@ -53,7 +53,7 @@ public enum ObjetATrouver {
 	 * @return
 	 */
 	public static ObjetATrouver getObjetATrouver(int numero){
-		return vecteurOBJ[numero+1];
+		return vecteurOBJ[numero-1];
 	
 	}
 	/**
