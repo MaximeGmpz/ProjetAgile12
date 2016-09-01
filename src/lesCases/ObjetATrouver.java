@@ -9,7 +9,7 @@ package lesCases;
  */
 public enum ObjetATrouver {
 	
-	hache(1,"R"), pelle(2,"T"), scoubidou(3," "), bidou(4," "), wha(5," "), Goal(6,"G"), bois(7,"B");
+	pomme(1,Case.GREEN+"Q"+Case.RESET,1,0), pomme_pourri(2,Case.RED+"Q"+Case.RESET,-1,0), café(3,Case.GREEN+"U"+Case.RESET,0,1), tisane(4,Case.GREEN+"U"+Case.RESET,0,-1);
 
 //////////////////////////////////////////////////////////////////////////////
 //                               ATRIBUS                                    //
@@ -17,6 +17,9 @@ public enum ObjetATrouver {
 	private int numeroOBJ ;
 	private static ObjetATrouver[] vecteurOBJ =values();
 	private String representation;
+	private int infuenceTaille;
+	private int infuenceAction;
+	
 	/**
 	 * Objet a trouver  qui prend un numero et une representation
 	 * @param numero
@@ -24,9 +27,11 @@ public enum ObjetATrouver {
 	 * @param representation
 	 *        representation  string : en vu de l affichage
 	 */
-	private ObjetATrouver(int numero,String representation){
+	private ObjetATrouver(int numero,String representation,int influenceTaille,int influenceAction){
 		this.numeroOBJ=numero;
 		this.representation= representation;
+		this.influenceTaille=influenceTaille;
+		this.influenceAction=influenceAction;
 	}
 	/**
 	 * Retourne le numero associer a un objet
@@ -57,6 +62,12 @@ public enum ObjetATrouver {
 	 */
 	public int getHauteur(){
 		return 2;
+	}
+	public int getInfluenceTaille(){
+		return influenceTaille;
+	}
+	public int getInfulenceAction(){
+		return influenceAction;
 	}
 
 }
