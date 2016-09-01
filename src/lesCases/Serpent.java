@@ -28,6 +28,27 @@ public class Serpent {
 				a.y-- ;
 			}
 		}
+		if(direction == Directions.EST){
+			for(Case a : serpent){
+				test.plateau.placer(a.getX(), a.getY(), new CaseNormal(new int[]{a.getX() , a.getY() , 0 }));
+				test.plateau.placer(a.getX() + 1 , a.getY(), a );
+				a.x++ ;
+			}
+		}
+		if(direction == Directions.SUD){
+			for(Case a : serpent){
+				test.plateau.placer(a.getX(), a.getY(), new CaseNormal(new int[]{a.getX() , a.getY() , 0 }));
+				test.plateau.placer(a.getX() , a.getY() + 1, a );
+				a.y++ ;
+			}
+		}
+		if(direction == Directions.OUEST){
+			for(Case a : serpent){
+				test.plateau.placer(a.getX(), a.getY(), new CaseNormal(new int[]{a.getX() , a.getY() , 0 }));
+				test.plateau.placer(a.getX() - 1 , a.getY(), a );
+				a.y-- ;
+			}
+		}
 	}
 	
 /*	public Snacke(){

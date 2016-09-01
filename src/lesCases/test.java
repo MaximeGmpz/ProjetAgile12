@@ -16,6 +16,8 @@ public class test {
 		plateau.afficher(); 
 		python.deplacer(Directions.NORD);
 		plateau.afficher(); 
+		python.deplacer(Directions.EST);
+		plateau.afficher(); 
 	}
 
 }
