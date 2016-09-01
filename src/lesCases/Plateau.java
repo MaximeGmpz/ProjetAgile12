@@ -2,8 +2,11 @@ package lesCases;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
+
+import com.sun.jmx.snmp.SnmpStringFixed;
 
 import sun.misc.ThreadGroupUtils;
 public class Plateau {
@@ -188,6 +191,38 @@ public class Plateau {
 				e.printStackTrace();
 			}
 			return Integer.parseInt(tailleLue);
+		}
+		
+		public String getCouleurPlateau() {
+			FileReader lectureCouleur;
+			BufferedReader buffer;
+			String couleurLue="";
+			
+			try {
+				lectureCouleur= new FileReader("options.txt");
+				buffer=new BufferedReader(lectureCouleur);
+				couleurLue=buffer.readLine();
+				couleurLue=buffer.readLine();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e){
+				e.printStackTrace();
+			}
+			return couleurLue;
+		
+		}
+		
+		public void setOptions (int taille, String couleur){
+			try {
+				FileWriter ffw=new FileWriter("options.txt");
+				ffw.write(taille);
+				ffw.write("\n");
+				ffw.write(couleur);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	
