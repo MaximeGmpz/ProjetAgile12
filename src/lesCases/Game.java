@@ -11,8 +11,8 @@ public class Game {
 		boolean b=true;
 		
 
-		Serpent s1 = new Serpent(1, 8, 8);
-		Serpent s2 = new Serpent(2, 2, 2);
+		Serpent s1 = new Serpent(1, test.plateau.getTaille()-2, test.plateau.getTaille()-3);
+		Serpent s2 = new Serpent(2, 1, 1);
 		
 		while(!victoire){
 			test.plateau.afficher();
