@@ -98,7 +98,7 @@ public class Menu {
 			}
 			this.taillePlateau=taille;
 			try {
-				System.out.println("grde");
+				
 				FileWriter ffw=new FileWriter("options.txt");
 				ffw.write(""+this.taillePlateau);
 				ffw.close();
