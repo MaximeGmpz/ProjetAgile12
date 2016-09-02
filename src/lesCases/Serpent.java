@@ -66,8 +66,13 @@ public class Serpent {
 					
 		}
 if(!test.plateau.getCase(teteX, teteY).estfranchissable()){
-			System.out.println("L'équipe 1 à perdu");
+	
+		if(id == 1){
+			System.out.println(Case.BLUE + "L'équipe 2 a gagné" + Case.RESET);
+		}else{
+			System.out.println(Case.RED + "L'équipe 1 à gagné" + Case.RESET);
 		}
+}
 		
 		
 
