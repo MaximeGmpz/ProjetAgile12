@@ -125,7 +125,7 @@ public class Menu {
 		
 		for(int i = 1 ; i <5 ; i++){
 			System.out.println(i);
-			Plateau monPlateau = new Plateau(i-1);
+			Plateau monPlateau = new Plateau(i);
 			monPlateau.afficher();
 			
 		}
