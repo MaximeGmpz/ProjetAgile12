@@ -141,6 +141,6 @@ public class Menu {
 	}
 	
 	public Plateau getPlateauChoisi() {
-		return new Plateau(taillePlateau);
+		return plateauChoisi;
 	}
 }
