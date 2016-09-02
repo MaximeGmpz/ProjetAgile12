@@ -2,6 +2,8 @@ package lesCases;
 
 public class Game {
 	boolean victoire=false;
+	
+	
 
 	public Game(){
 		char c;
@@ -15,11 +17,8 @@ public class Game {
 		while(!victoire){
 			test.plateau.afficher();
 			
-			c=' ';
+			c=getCar();
 			
-			while (c==' '){
-				c= new MonScanner().c;
-			}
 			System.out.println(b);
 			if(b){
 			
@@ -31,6 +30,11 @@ public class Game {
 					s1.deplacer(Directions.EST);
 				}else if (c=='s'){
 					s1.deplacer(Directions.SUD);
+				}else if (c=='e'){
+					System.out.println("Quitter le jeu ? (o/n)");
+					if(getCar()=='o'){
+						victoire=true;
+					}					
 				}
 				b=false;
 			}else {
@@ -42,12 +46,29 @@ public class Game {
 					s2.deplacer(Directions.EST);
 				}else if (c=='2'){
 					s2.deplacer(Directions.SUD);
+				}else if (c=='e'){
+					System.out.println("Quitter le jeu ? (o/n)");
+					if(getCar()=='o'){
+						victoire=true;
+					}	
 				}
 				b=!b;
 				
 			}
 			
 		}
+		
 	
+	}
+	public char getCar(){
+		char c=' ';
+		while (c==' '){
+			try{
+				c= new MonScanner().c;
+			}catch(Exception e){
+				c=' ';
+			}
+		}
+		return c;
 	}
 }
