@@ -5,6 +5,7 @@ public class Tete extends Case {
 	public Tete(int x , int y , int equipe) {
 		super(x , y);
 		this.equipe = equipe;
+		franchissable = false ;
 	}
 
 	@Override

@@ -51,9 +51,11 @@ public class Serpent {
 			tete.x--;
 
 		}
-		// if(test.plateau.getCase(teteX, teteY))
+		if(!test.plateau.getCase(teteX, teteY).estfranchissable()){
+			
+		}
 		test.plateau.placer(tete);
-		ArrayList<Corp> copie = (ArrayList<Corp>) serpent.clone(); ;
+		ArrayList<Corp> copie = (ArrayList<Corp>) serpent.clone(); 
 		serpent.get(0).x = teteX ;
 		serpent.get(0).y = teteY ;
 		test.plateau.placer(serpent.get(0));
@@ -62,6 +64,9 @@ public class Serpent {
 			serpent.get(i).y = copie.get(i - 1).getY();
 			test.plateau.placer(serpent.get(i));
 					
+		}
+if(!test.plateau.getCase(teteX, teteY).estfranchissable()){
+			System.out.println("L'équipe 1 à perdu");
 		}
 		
 		
