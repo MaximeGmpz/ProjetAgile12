@@ -16,8 +16,7 @@ public abstract class Case implements Affichable
 	
 	public int x;
 	public int y;
-	private boolean franchissableEquipe1;
-    private boolean franchissableEquipe2;
+	public boolean franchissable ;
     protected ObjetATrouver obj;
     private boolean Modifiable;
     public static Scanner scan = new Scanner(System.in);
@@ -139,32 +138,8 @@ public abstract class Case implements Affichable
 	 * @return franchissableEquipe1
 	 *         franchissableEquipe1 un boolean
 	 */
-	public boolean getFranchissableEquipe1(){
-		return this.franchissableEquipe1;
-	}
-	/**
-	 * renvoi l'�tat de l atribut Francissable de  l'�quipe 2
-	 * @return franchissableEquipe2
-	 *         franchissableEquipe2 un boolean
-	 */
-	public boolean getFranchissableEquipe2(){
-		return this.franchissableEquipe2;
-	}
-	/**
-	 * remplace franchissableEquipe1 par la valeur de b
-	 * @param b
-	 *        b boolean
-	 */
-	public void setFranchissableEquipe1(boolean b){
-		this.franchissableEquipe1=b;
-	}
-	/**
-	 * remplace franchissableEquipe2 par la valeur de b
-	 * @param b
-	 *        b boolean
-	 */
-	public void setFranchissableEquipe2(boolean b){
-		this.franchissableEquipe2=b;
+	public boolean estfranchissable(){
+		return franchissable ;
 	}
 
 	

@@ -55,8 +55,6 @@ private int ratio = 0;
 public CaseNormal(int[] coordonnes, ObjetATrouver obj) {
 super(coordonnes);
 
-this.setFranchissableEquipe1(true);
-this.setFranchissableEquipe2(true);
 super.obj = obj;
 this.setModifiable(true);
 this.setRepresentaion(obj.getRepresentationObjetATrouver());
@@ -70,10 +68,7 @@ this.setRepresentaion(obj.getRepresentationObjetATrouver());
 public CaseNormal(int[] coordonnes) {
 super(coordonnes);
 
-this.setFranchissableEquipe1(true);
-this.setFranchissableEquipe2(true);
-//this.obj = null;
-this.setModifiable(true);
+franchissable = true ;
 
 }
 

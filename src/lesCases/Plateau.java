@@ -209,6 +209,10 @@ public class Plateau {
 			}
 		}
 		
+		public Affichable getCase(int x , int y){
+			return plateau[x][y][0] ;
+		}
+		
 	
 	}
 

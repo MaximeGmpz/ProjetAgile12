@@ -26,11 +26,13 @@ public class Serpent {
 	}
 
 	public void deplacer(int direction) {
+		
 		int teteX = tete.getX() ;
 		int teteY = tete.getY();
+		
  		
 		if (direction == Directions.NORD) {
-
+			
 			
 			tete.y--;
 			
@@ -49,6 +51,7 @@ public class Serpent {
 			tete.x--;
 
 		}
+		// if(test.plateau.getCase(teteX, teteY))
 		test.plateau.placer(tete);
 		ArrayList<Corp> copie = (ArrayList<Corp>) serpent.clone(); ;
 		serpent.get(0).x = teteX ;
@@ -60,11 +63,7 @@ public class Serpent {
 			test.plateau.placer(serpent.get(i));
 					
 		}
-		int tab[]=new int[3];
-		tab[0]=serpent.get(serpent.size()-1).getX() ;
-		tab[1]=serpent.get(serpent.size()-1).getY() ;
-		tab[2]=0;
-		test.plateau.placer(new CaseNormal(tab ));
+		
 		
 
 	}
