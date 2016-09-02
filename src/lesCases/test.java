@@ -9,6 +9,6 @@ public class test {
 		final Menu menu = new Menu() ;
 		plateau = menu.getPlateauChoisi();
 		  
-		new Game();
+		new Game(plateau);
 	}
 }

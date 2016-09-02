@@ -112,7 +112,7 @@ public class Menu {
 			new Menu();	
 			
 		}
-			System.out.println(this.taillePlateau);
+			
 			
 			new Menu();
 		 
