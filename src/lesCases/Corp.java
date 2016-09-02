@@ -7,6 +7,7 @@ public class Corp extends Case {
 	public Corp(int equipe , int x , int y) {
 		super(x , y) ;
 		this.equipe = equipe ;
+		franchissable = false ;
 	}
 
 	@Override

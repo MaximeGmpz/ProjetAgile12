@@ -34,7 +34,7 @@ public class Game {
 				}
 				b=false;
 			}else {
-				if(c=='o'){
+				if(c=='5'){
 					s2.deplacer(Directions.NORD);
 				}else if (c=='1'){
 					s2.deplacer(Directions.OUEST);

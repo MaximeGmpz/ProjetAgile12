@@ -209,6 +209,10 @@ public class Plateau {
 			}
 		}
 		
+		public Case getCase(int x , int y){
+			return (Case) plateau[x][y][0] ;
+		}
+		
 	
 	}
 

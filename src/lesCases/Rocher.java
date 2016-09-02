@@ -26,10 +26,7 @@ private int numeroEquipe=0;
 public Rocher(int[] coordonnes) {
 super(coordonnes);
 
-this.setFranchissableEquipe1(false);
-this.setFranchissableEquipe2(false);
-// this.setObj(null);
-this.setModifiable(false);
+franchissable = false ;
 
 }
 //////////////////////////////////////////////////////////////////////////////
