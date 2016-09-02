@@ -29,25 +29,33 @@ public class Serpent {
 		
 		int teteX = tete.getX() ;
 		int teteY = tete.getY();
+		Case arrivee = new Case(0,0) {
+			
+			@Override
+			public int getNumeroEquipe() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		};
 		
  		
 		if (direction == Directions.NORD) {
 			
-			
+			arrivee = test.plateau.getCase(teteX, teteY - 1);
 			tete.y--;
 			
 
 		}
 		if (direction == Directions.EST) {
-			
+			arrivee = test.plateau.getCase(teteX + 1, teteY);
 			tete.x++;
 		}
 		if (direction == Directions.SUD) {
-			
+			arrivee = test.plateau.getCase(teteX, teteY + 1);
 			tete.y++;
 		}
 		if (direction == Directions.OUEST) {
-			
+			arrivee = test.plateau.getCase(teteX - 1, teteY);
 			tete.x--;
 
 		}
@@ -65,7 +73,8 @@ public class Serpent {
 			test.plateau.placer(serpent.get(i));
 					
 		}
-if(!test.plateau.getCase(teteX, teteY).estfranchissable()){
+if(!arrivee.estfranchissable()){
+	System.out.println("X : "+ teteX + " Y : " + teteY);
 	
 		if(id == 1){
 			System.out.println(Case.BLUE + "L'équipe 2 a gagné" + Case.RESET);

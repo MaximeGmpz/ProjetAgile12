@@ -58,7 +58,7 @@ super(coordonnes);
 super.obj = obj;
 this.setModifiable(true);
 this.setRepresentaion(obj.getRepresentationObjetATrouver());
-
+franchissable = true ;
 }
  /**
   * Constructeur numero 2 des CaseNormal
